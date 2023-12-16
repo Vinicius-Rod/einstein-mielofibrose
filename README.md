@@ -16,12 +16,21 @@ Grupo:
 Remover diretório 
 
 ```bash
-rm -r /content/sample_data/
+!rm -r /content/sample_data/
 ```
 
 ## Instalação
 
 ```bash
-rm -rf einstein-mielofibrose
-git clone https://github.com/Vinicius-Rod/einstein-mielofibrose
+!rm -rf einstein-mielofibrose
+!git clone https://github.com/Vinicius-Rod/einstein-mielofibrose
+```
+
+```bash
+%%bash
+git clone --recurse-submodules https://github.com/samtools/htslib.git
+git clone https://github.com/samtools/bcftools.git
+cd bcftools
+make
+make install
 ```
