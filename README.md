@@ -12,9 +12,11 @@ Grupo:
 
 
 ##Preparando o ambiente
+
 Remover diretório 
+
 '''
-!rm -r /content/sample_data/
+rm -r /content/sample_data/
 '''
 
 ##Instalação
