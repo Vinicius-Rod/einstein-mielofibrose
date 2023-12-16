@@ -15,7 +15,7 @@ Pipe para rodar no Google Colab
 
 ## PREPARANDO O AMBIENTE
 
-Remover diretório 
+Remover diretório sample_data
 
 ```bash
 %%bash
