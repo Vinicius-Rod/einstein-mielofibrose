@@ -11,7 +11,7 @@ Grupo:
 4.   Silas Fernandes Eto
 
 
-##Preparando o ambiente
+## Preparando o ambiente
 
 Remover diretório 
 
@@ -19,4 +19,9 @@ Remover diretório
 rm -r /content/sample_data/
 ```
 
-##Instalação
+## Instalação
+
+```bash
+rm -rf einstein-mielofibrose
+git clone https://github.com/Vinicius-Rod/einstein-mielofibrose
+```
