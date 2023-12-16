@@ -11,7 +11,7 @@ Grupo:
 4.   Silas Fernandes Eto
 
 
-## Preparando o ambiente
+## PREPARANDO O AMBIENTE
 
 Remover diretório 
 
@@ -20,7 +20,7 @@ Remover diretório
 rm -r /content/sample_data/
 ```
 
-## Instalação
+## INSTALÇÃO
 
 ```bash
 %%bash
@@ -46,4 +46,38 @@ udocker --allow-root install
 
 ```bash
 !udocker --allow-root pull ensemblorg/ensembl-vep
+```
+
+## FILTRAGEM
+
+```bash
+!sh einstein-mielofibrose/vep-gc.sh WP093 Myelofibrosis.txt
+!sh einstein-mielofibrose/vep-gc.sh WP087 Myelofibrosis.txt
+!sh einstein-mielofibrose/vep-gc.sh WP060 Myelofibrosis.txt
+!sh einstein-mielofibrose/vep-gc.sh WP056 Myelofibrosis.txt
+!sh einstein-mielofibrose/vep-gc.sh WP066 Myelofibrosis.txt
+!sh einstein-mielofibrose/vep-gc.sh WP064 Myelofibrosis.txt
+!sh einstein-mielofibrose/vep-gc.sh WP072 Myelofibrosis.txt
+!sh einstein-mielofibrose/vep-gc.sh WP078 Myelofibrosis.txt
+!sh einstein-mielofibrose/vep-gc.sh WP285 Myelofibrosis.txt
+!sh einstein-mielofibrose/vep-gc.sh WP280 Myelofibrosis.txt
+!sh einstein-mielofibrose/vep-gc.sh WP274 Myelofibrosis.txt
+!sh einstein-mielofibrose/vep-gc.sh WP276 Myelofibrosis.txt
+!sh einstein-mielofibrose/vep-gc.sh WP270 Myelofibrosis.txt
+!sh einstein-mielofibrose/vep-gc.sh WP216 Myelofibrosis.txt
+!sh einstein-mielofibrose/vep-gc.sh WP306 Myelofibrosis.txt
+!sh einstein-mielofibrose/vep-gc.sh WP297 Myelofibrosis.txt
+!sh einstein-mielofibrose/vep-gc.sh WP291 Myelofibrosis.txt
+!sh einstein-mielofibrose/vep-gc.sh WP295 Myelofibrosis.txt
+!sh einstein-mielofibrose/vep-gc.sh WP204 Myelofibrosis.txt
+!sh einstein-mielofibrose/vep-gc.sh WP160 Myelofibrosis.txt
+!sh einstein-mielofibrose/vep-gc.sh WP164 Myelofibrosis.txt
+!sh einstein-mielofibrose/vep-gc.sh WP162 Myelofibrosis.txt
+!sh einstein-mielofibrose/vep-gc.sh WP212 Myelofibrosis.txt
+!sh einstein-mielofibrose/vep-gc.sh WP170 Myelofibrosis.txt
+!sh einstein-mielofibrose/vep-gc.sh WP196 Myelofibrosis.txt
+!sh einstein-mielofibrose/vep-gc.sh WP180 Myelofibrosis.txt
+!sh einstein-mielofibrose/vep-gc.sh WP188 Myelofibrosis.txt
+!sh einstein-mielofibrose/vep-gc.sh WP140 Myelofibrosis.txt
+!sh einstein-mielofibrose/vep-gc.sh WP126 Myelofibrosis.txt
 ```
