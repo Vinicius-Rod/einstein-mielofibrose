@@ -20,7 +20,7 @@ Remover diretório
 rm -r /content/sample_data/
 ```
 
-## INSTALÇÃO
+## INSTALAÇÃO
 
 ```bash
 %%bash
