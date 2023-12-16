@@ -15,8 +15,8 @@ Grupo:
 
 Remover diretório 
 
-'''
+```bash
 rm -r /content/sample_data/
-'''
+```
 
 ##Instalação
