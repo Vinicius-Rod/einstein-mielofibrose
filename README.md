@@ -9,3 +9,12 @@ Grupo:
 2.   Victor Baca
 3.   Victoria Leite
 4.   Silas Fernandes Eto
+
+
+##Preparando o ambiente
+Remover diretório 
+'''
+!rm -r /content/sample_data/
+'''
+
+##Instalação
