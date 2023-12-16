@@ -50,6 +50,8 @@ udocker --allow-root install
 
 ## FILTRAGEM
 
+Rodar cada linha em uma célula diferente
+
 ```bash
 !sh einstein-mielofibrose/vep-gc.sh WP093 Myelofibrosis.txt
 !sh einstein-mielofibrose/vep-gc.sh WP087 Myelofibrosis.txt
