@@ -16,14 +16,16 @@ Grupo:
 Remover diretório 
 
 ```bash
-!rm -r /content/sample_data/
+%%bash
+rm -r /content/sample_data/
 ```
 
 ## Instalação
 
 ```bash
-!rm -rf einstein-mielofibrose
-!git clone https://github.com/Vinicius-Rod/einstein-mielofibrose
+%%bash
+rm -rf einstein-mielofibrose
+git clone https://github.com/Vinicius-Rod/einstein-mielofibrose
 ```
 
 ```bash
@@ -33,4 +35,11 @@ git clone https://github.com/samtools/bcftools.git
 cd bcftools
 make
 make install
+```
+
+```bash
+%%bash
+# Fonte: https://gist.github.com/mwufi/6718b30761cd109f9aff04c5144eb885
+pip install udocker
+udocker --allow-root install
 ```
