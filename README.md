@@ -43,3 +43,7 @@ make install
 pip install udocker
 udocker --allow-root install
 ```
+
+```bash
+!udocker --allow-root pull ensemblorg/ensembl-vep
+```
