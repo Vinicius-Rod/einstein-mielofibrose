@@ -12,8 +12,6 @@ Referência: https://github.com/renatopuga/lmabrasil-hg38
 3.   Victoria Leite
 4.   Silas Fernandes Eto
 
-
-
 ## PREPARANDO O AMBIENTE
 
 Remover diretório sample_data
@@ -98,6 +96,9 @@ diretorio_origem="/content/einstein-mielofibrose/analises/"
 ```
 
 ##  AMOSTRAS
+
+
+![image](https://github.com/Vinicius-Rod/einstein-mielofibrose/assets/127097344/bb3223b8-92b3-4c7c-b9d0-2da2a507f518)
 
 ```BASH
 import pandas as pd
