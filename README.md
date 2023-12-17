@@ -96,3 +96,52 @@ mkdir -p /content/einstein-mielofibrose/analises/ && mv /content/einstein-mielof
 diretorio_origem="/content/einstein-mielofibrose/analises/"
 !find $diretorio_origem -name "*WP*.tsv" | sort | uniq | xargs -I {} sh -c 'numero_arquivo=$(basename "{}" | awk -F"[_.]" "{print tolower(\$2)}" | sed "s/[^0-9]//g"); linhas=$(($(wc -l < "{}") - 1)); if [ "$numero_arquivo" != "" ] && [ "$numero_arquivo" != "allelelength" ] && [ "$numero_arquivo" != "tsv" ]; then echo "A amostra WP$numero_arquivo tem $linhas variante(s)."; fi' _
 ```
+
+##  AMOSTRAS
+
+```BASH
+import pandas as pd
+pd.set_option('display.max_columns', None)
+df_WP048 = pd.read_csv('/content/einstein-mielofibrose/analises/liftOver_WP048_hg19ToHg38.vep.filter.tsv', sep='\t', index_col=False, engine='python')
+df_WP056 = pd.read_csv('/content/einstein-mielofibrose/analises/liftOver_WP056_hg19ToHg38.vep.filter.tsv', sep='\t', index_col=False, engine='python')
+df_WP060 = pd.read_csv('/content/einstein-mielofibrose/analises/liftOver_WP060_hg19ToHg38.vep.filter.tsv', sep='\t', index_col=False, engine='python')
+df_WP064 = pd.read_csv('/content/einstein-mielofibrose/analises/liftOver_WP064_hg19ToHg38.vep.filter.tsv', sep='\t', index_col=False, engine='python')
+df_WP066 = pd.read_csv('/content/einstein-mielofibrose/analises/liftOver_WP066_hg19ToHg38.vep.filter.tsv', sep='\t', index_col=False, engine='python')
+df_WP072 = pd.read_csv('/content/einstein-mielofibrose/analises/liftOver_WP072_hg19ToHg38.vep.filter.tsv', sep='\t', index_col=False, engine='python')
+df_WP078 = pd.read_csv('/content/einstein-mielofibrose/analises/liftOver_WP078_hg19ToHg38.vep.filter.tsv', sep='\t', index_col=False, engine='python')
+df_WP087 = pd.read_csv('/content/einstein-mielofibrose/analises/liftOver_WP087_hg19ToHg38.vep.filter.tsv', sep='\t', index_col=False, engine='python')
+df_WP093 = pd.read_csv('/content/einstein-mielofibrose/analises/liftOver_WP093_hg19ToHg38.vep.filter.tsv', sep='\t', index_col=False, engine='python')
+df_WP126 = pd.read_csv('/content/einstein-mielofibrose/analises/liftOver_WP126_hg19ToHg38.vep.filter.tsv', sep='\t', index_col=False, engine='python')
+df_WP140 = pd.read_csv('/content/einstein-mielofibrose/analises/liftOver_WP140_hg19ToHg38.vep.filter.tsv', sep='\t', index_col=False, engine='python')
+df_WP160 = pd.read_csv('/content/einstein-mielofibrose/analises/liftOver_WP160_hg19ToHg38.vep.filter.tsv', sep='\t', index_col=False, engine='python')
+df_WP162 = pd.read_csv('/content/einstein-mielofibrose/analises/liftOver_WP162_hg19ToHg38.vep.filter.tsv', sep='\t', index_col=False, engine='python')
+df_WP164 = pd.read_csv('/content/einstein-mielofibrose/analises/liftOver_WP164_hg19ToHg38.vep.filter.tsv', sep='\t', index_col=False, engine='python')
+df_WP170 = pd.read_csv('/content/einstein-mielofibrose/analises/liftOver_WP170_hg19ToHg38.vep.filter.tsv', sep='\t', index_col=False, engine='python')
+df_WP180 = pd.read_csv('/content/einstein-mielofibrose/analises/liftOver_WP180_hg19ToHg38.vep.filter.tsv', sep='\t', index_col=False, engine='python')
+df_WP188 = pd.read_csv('/content/einstein-mielofibrose/analises/liftOver_WP188_hg19ToHg38.vep.filter.tsv', sep='\t', index_col=False, engine='python')
+df_WP196 = pd.read_csv('/content/einstein-mielofibrose/analises/liftOver_WP196_hg19ToHg38.vep.filter.tsv', sep='\t', index_col=False, engine='python')
+df_WP204 = pd.read_csv('/content/einstein-mielofibrose/analises/liftOver_WP204_hg19ToHg38.vep.filter.tsv', sep='\t', index_col=False, engine='python')
+df_WP212 = pd.read_csv('/content/einstein-mielofibrose/analises/liftOver_WP212_hg19ToHg38.vep.filter.tsv', sep='\t', index_col=False, engine='python')
+df_WP216 = pd.read_csv('/content/einstein-mielofibrose/analises/liftOver_WP216_hg19ToHg38.vep.filter.tsv', sep='\t', index_col=False, engine='python')
+df_WP270 = pd.read_csv('/content/einstein-mielofibrose/analises/liftOver_WP270_hg19ToHg38.vep.filter.tsv', sep='\t', index_col=False, engine='python')
+df_WP274 = pd.read_csv('/content/einstein-mielofibrose/analises/liftOver_WP274_hg19ToHg38.vep.filter.tsv', sep='\t', index_col=False, engine='python')
+df_WP276 = pd.read_csv('/content/einstein-mielofibrose/analises/liftOver_WP276_hg19ToHg38.vep.filter.tsv', sep='\t', index_col=False, engine='python')
+df_WP280 = pd.read_csv('/content/einstein-mielofibrose/analises/liftOver_WP280_hg19ToHg38.vep.filter.tsv', sep='\t', index_col=False, engine='python')
+df_WP285 = pd.read_csv('/content/einstein-mielofibrose/analises/liftOver_WP285_hg19ToHg38.vep.filter.tsv', sep='\t', index_col=False, engine='python')
+df_WP291 = pd.read_csv('/content/einstein-mielofibrose/analises/liftOver_WP291_hg19ToHg38.vep.filter.tsv', sep='\t', index_col=False, engine='python')
+df_WP295 = pd.read_csv('/content/einstein-mielofibrose/analises/liftOver_WP295_hg19ToHg38.vep.filter.tsv', sep='\t', index_col=False, engine='python')
+df_WP297 = pd.read_csv('/content/einstein-mielofibrose/analises/liftOver_WP297_hg19ToHg38.vep.filter.tsv', sep='\t', index_col=False, engine='python')
+df_WP306 = pd.read_csv('/content/einstein-mielofibrose/analises/liftOver_WP306_hg19ToHg38.vep.filter.tsv', sep='\t', index_col=False, engine='python')
+```
+
+```bash
+import pandas as pd
+colunas_desejadas = ['CHROM', 'SYMBOL', 'Consequence', 'BIOTYPE', 'VARIANT_CLASS', 'SIFT', 'PolyPhen', 'IMPACT', 'CLIN_SIG', 'FILTER']
+df_combined = pd.concat(dataframes, ignore_index=True)
+df_combined_subset = df_combined[colunas_desejadas]
+pd.set_option('display.max_columns', None) 
+pd.set_option('display.max_rows', None) 
+pd.set_option('display.max_colwidth', None)  
+display(df_combined_subset)
+df_combined_subset.to_csv('/content/einstein-mielofibrose/analises/combined_data_subset.csv', index=False)
+```
