@@ -156,10 +156,9 @@ colunas_desejadas = ['TumorID','CHROM', 'SYMBOL', 'Consequence', 'BIOTYPE', 'VAR
 df_combined_subset = df_combined[colunas_desejadas]
 
 
-pd.set_option('display.max_columns', None)  # Exibir todas as colunas
-pd.set_option('display.max_rows', None)  # Exibir todas as linhas
-pd.set_option('display.max_colwidth', None)  # Exibir todo o conteúdo das colunas
-
+pd.set_option('display.max_columns', None)  
+pd.set_option('display.max_rows', None) 
+pd.set_option('display.max_colwidth', None) 
 
 display(df_combined_subset)
 
