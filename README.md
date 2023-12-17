@@ -136,6 +136,7 @@ df_WP306 = pd.read_csv('/content/einstein-mielofibrose/analises/liftOver_WP306_h
 import pandas as pd
 
 
+
 dataframes = [
     df_WP048, df_WP056, df_WP060, df_WP064, df_WP066,
     df_WP072, df_WP078, df_WP087, df_WP093, df_WP126,
@@ -149,7 +150,7 @@ dataframes = [
 df_combined = pd.concat(dataframes, ignore_index=True)
 
 
-colunas_desejadas = ['CHROM', 'SYMBOL', 'Consequence', 'BIOTYPE', 'VARIANT_CLASS', 'SIFT', 'PolyPhen', 'IMPACT', 'CLIN_SIG', 'FILTER']
+colunas_desejadas = ['TumorID','CHROM', 'SYMBOL', 'Consequence', 'BIOTYPE', 'VARIANT_CLASS', 'SIFT', 'PolyPhen', 'IMPACT', 'CLIN_SIG', 'FILTER']
 
 
 df_combined_subset = df_combined[colunas_desejadas]
