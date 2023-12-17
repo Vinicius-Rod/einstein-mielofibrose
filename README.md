@@ -135,9 +135,7 @@ df_WP306 = pd.read_csv('/content/einstein-mielofibrose/analises/liftOver_WP306_h
 ```bash
 import pandas as pd
 
-# Supondo que você tenha os DataFrames como descrito anteriormente
 
-# Lista de DataFrames
 dataframes = [
     df_WP048, df_WP056, df_WP060, df_WP064, df_WP066,
     df_WP072, df_WP078, df_WP087, df_WP093, df_WP126,
@@ -147,23 +145,23 @@ dataframes = [
     df_WP285, df_WP291, df_WP295, df_WP297, df_WP306
 ]
 
-# Concatenar os DataFrames
+
 df_combined = pd.concat(dataframes, ignore_index=True)
 
-# Lista de colunas desejadas
+
 colunas_desejadas = ['CHROM', 'SYMBOL', 'Consequence', 'BIOTYPE', 'VARIANT_CLASS', 'SIFT', 'PolyPhen', 'IMPACT', 'CLIN_SIG', 'FILTER']
 
-# Selecionar apenas as colunas desejadas
+
 df_combined_subset = df_combined[colunas_desejadas]
 
-# Ajustar configurações de exibição (ajuste conforme necessário)
+
 pd.set_option('display.max_columns', None)  # Exibir todas as colunas
 pd.set_option('display.max_rows', None)  # Exibir todas as linhas
 pd.set_option('display.max_colwidth', None)  # Exibir todo o conteúdo das colunas
 
-# Exibir o DataFrame combinado com apenas as colunas desejadas
+
 display(df_combined_subset)
 
-# Salvar o DataFrame combinado com apenas as colunas desejadas como um arquivo CSV
+
 df_combined_subset.to_csv('/content/einstein-mielofibrose/analises/combined_data_subset.csv', index=False)
 ```
