@@ -80,6 +80,11 @@ udocker --allow-root install
 !sh einstein-mielofibrose/vep-gc.sh WP276 Myelofibrosis.txt
 !sh einstein-mielofibrose/vep-gc.sh WP280 Myelofibrosis.txt
 !sh einstein-mielofibrose/vep-gc.sh WP285 Myelofibrosis.txt
+!sh einstein-mielofibrose/vep-gc.sh WP291 Myelofibrosis.txt
+!sh einstein-mielofibrose/vep-gc.sh WP295 Myelofibrosis.txt
+!sh einstein-mielofibrose/vep-gc.sh WP297 Myelofibrosis.txt
+!sh einstein-mielofibrose/vep-gc.sh WP306 Myelofibrosis.txt
+```
 
 ### QUANTIDADE DE VARIANTES DE CADA AMOSTRA
 
@@ -90,10 +95,4 @@ mkdir -p /content/einstein-mielofibrose/analises/ && mv /content/einstein-mielof
 ```bash
 diretorio_origem="/content/einstein-mielofibrose/analises/"
 !find $diretorio_origem -name "*WP*.tsv" | sort | uniq | xargs -I {} sh -c 'numero_arquivo=$(basename "{}" | awk -F"[_.]" "{print tolower(\$2)}" | sed "s/[^0-9]//g"); linhas=$(($(wc -l < "{}") - 1)); if [ "$numero_arquivo" != "" ] && [ "$numero_arquivo" != "allelelength" ] && [ "$numero_arquivo" != "tsv" ]; then echo "A amostra WP$numero_arquivo tem $linhas variante(s)."; fi' _
-```
-!sh einstein-mielofibrose/vep-gc.sh WP291 Myelofibrosis.txt
-!sh einstein-mielofibrose/vep-gc.sh WP295 Myelofibrosis.txt
-!sh einstein-mielofibrose/vep-gc.sh WP297 Myelofibrosis.txt
-!sh einstein-mielofibrose/vep-gc.sh WP306 Myelofibrosis.txt
-
 ```
