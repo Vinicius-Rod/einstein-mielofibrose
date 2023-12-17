@@ -135,8 +135,6 @@ df_WP306 = pd.read_csv('/content/einstein-mielofibrose/analises/liftOver_WP306_h
 ```bash
 import pandas as pd
 
-
-
 dataframes = [
     df_WP048, df_WP056, df_WP060, df_WP064, df_WP066,
     df_WP072, df_WP078, df_WP087, df_WP093, df_WP126,
@@ -146,22 +144,12 @@ dataframes = [
     df_WP285, df_WP291, df_WP295, df_WP297, df_WP306
 ]
 
-
 df_combined = pd.concat(dataframes, ignore_index=True)
-
-
-colunas_desejadas = ['TumorID','CHROM', 'SYMBOL', 'Consequence', 'BIOTYPE', 'VARIANT_CLASS', 'SIFT', 'PolyPhen', 'IMPACT', 'CLIN_SIG', 'FILTER']
-
-
+colunas_desejadas = ['TumorID','CHROM', 'MAX_AF', 'SYMBOL', 'Consequence', 'BIOTYPE', 'VARIANT_CLASS', 'SIFT', 'PolyPhen', 'IMPACT', 'CLIN_SIG', 'FILTER']
 df_combined_subset = df_combined[colunas_desejadas]
-
-
-pd.set_option('display.max_columns', None)  
-pd.set_option('display.max_rows', None) 
-pd.set_option('display.max_colwidth', None) 
-
+pd.set_option('display.max_columns', None)
+pd.set_option('display.max_rows', None)
+pd.set_option('display.max_colwidth', None)
 display(df_combined_subset)
-
-
 df_combined_subset.to_csv('/content/einstein-mielofibrose/analises/combined_data_subset.csv', index=False)
 ```
