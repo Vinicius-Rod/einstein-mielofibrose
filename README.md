@@ -235,7 +235,7 @@ result = pd.DataFrame(count_df, columns=['IMPACT'])
 display(HTML(result.to_html()))
 ```
 
-## Impacto x Consequencia x Genes
+## Impacto x Consequencia x PolyPhen x Genes
 
 ```bash
 import pandas as pd
