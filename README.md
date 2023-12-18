@@ -190,3 +190,58 @@ pd.set_option('display.max_colwidth', None)
 display(df_combined_subset)
 df_combined_subset.to_csv('/content/einstein-mielofibrose/analises/combined_data_subset.csv', index=False)
 ```
+
+### Consequência
+
+```bash
+import pandas as pd
+from IPython.display import display, HTML
+df = pd.read_csv('/content/einstein-mielofibrose/analises/combined_data_subset.csv')
+count_df = df['Consequence'].value_counts()
+result = pd.DataFrame(count_df, columns=['Consequence'])
+display(HTML(result.to_html()))
+```
+
+### Genes
+
+```bash
+import pandas as pd
+from IPython.display import display, HTML
+df = pd.read_csv('/content/einstein-mielofibrose/analises/combined_data_subset.csv')
+count_df = df['SYMBOL'].value_counts()
+result = pd.DataFrame(count_df, columns=['SYMBOL'])
+display(HTML(result.to_html()))
+```
+
+### Biotipo
+
+```bash
+import pandas as pd
+from IPython.display import display, HTML
+df = pd.read_csv('/content/einstein-mielofibrose/analises/combined_data_subset.csv')
+count_df = df['BIOTYPE'].value_counts()
+result = pd.DataFrame(count_df, columns=['BIOTYPE'])
+display(HTML(result.to_html()))
+```
+
+### Impacto
+
+```bash
+import pandas as pd
+from IPython.display import display, HTML
+df = pd.read_csv('/content/einstein-mielofibrose/analises/combined_data_subset.csv')
+count_df = df['IMPACT'].value_counts()
+result = pd.DataFrame(count_df, columns=['IMPACT'])
+display(HTML(result.to_html()))
+```
+
+## Impacto x Consequencia x Genes
+
+```bash
+import pandas as pd
+from IPython.display import display, HTML
+df = pd.read_csv('/content/einstein-mielofibrose/analises/combined_data_subset.csv')
+grouped_data = df.groupby(['IMPACT', 'Consequence', 'SYMBOL'])['TumorID'].unique().reset_index(name='Amostras')
+grouped_data['Contagem'] = df.groupby(['IMPACT', 'Consequence', 'SYMBOL']).size().values
+display(HTML(grouped_data.to_html(index=False)))
+```
