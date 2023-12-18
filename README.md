@@ -241,7 +241,7 @@ display(HTML(result.to_html()))
 import pandas as pd
 from IPython.display import display, HTML
 df = pd.read_csv('/content/einstein-mielofibrose/analises/combined_data_subset.csv')
-grouped_data = df.groupby(['IMPACT', 'Consequence', 'SYMBOL'])['TumorID'].unique().reset_index(name='Amostras')
-grouped_data['Contagem'] = df.groupby(['IMPACT', 'Consequence', 'SYMBOL']).size().values
+grouped_data = df.groupby(['IMPACT', 'Consequence', 'SYMBOL','PolyPhen'])['TumorID'].unique().reset_index(name='Amostras')
+grouped_data['Contagem'] = df.groupby(['IMPACT', 'Consequence', 'SYMBOL','PolyPhen']).size().values
 display(HTML(grouped_data.to_html(index=False)))
 ```
