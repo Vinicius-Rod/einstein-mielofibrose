@@ -91,6 +91,8 @@ mkdir -p /content/einstein-mielofibrose/analises/ && mv /content/einstein-mielof
 ```
 
 ```bash
+%%bash
+
 diretorio_origem="/content/einstein-mielofibrose/analises/"
 find $diretorio_origem -name "*WP*.tsv" -print0 | sort -z | uniq -z | xargs -0 -I {} bash -c '
     numero_arquivo=$(basename "{}" | awk -F"[_.]" "{print tolower(\$2)}" | sed "s/[^0-9]//g")
@@ -100,7 +102,7 @@ find $diretorio_origem -name "*WP*.tsv" -print0 | sort -z | uniq -z | xargs -0 -
         if [ $linhas -gt 0 ]; then
             echo "A amostra WP$numero_arquivo tem $linhas variante(s)"
         else
-            echo "A amostra WP$numero_arquivo - nenhuma variante passou pelo filtro"
+            echo "A amostra WP$numero_arquivo tem 0 variante(s) - nenhuma variante passou pelo filtro"
         fi
     fi
 '
