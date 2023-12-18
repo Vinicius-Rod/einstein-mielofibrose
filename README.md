@@ -91,8 +91,21 @@ mkdir -p /content/einstein-mielofibrose/analises/ && mv /content/einstein-mielof
 ```
 
 ```bash
+%%bash
+
 diretorio_origem="/content/einstein-mielofibrose/analises/"
-!find $diretorio_origem -name "*WP*.tsv" | sort | uniq | xargs -I {} sh -c 'numero_arquivo=$(basename "{}" | awk -F"[_.]" "{print tolower(\$2)}" | sed "s/[^0-9]//g"); linhas=$(($(wc -l < "{}") - 1)); if [ "$numero_arquivo" != "" ] && [ "$numero_arquivo" != "allelelength" ] && [ "$numero_arquivo" != "tsv" ]; then echo "A amostra WP$numero_arquivo tem $linhas variante(s)."; fi' _
+find $diretorio_origem -name "*WP*.tsv" -print0 | sort -z | uniq -z | xargs -0 -I {} bash -c '
+    numero_arquivo=$(basename "{}" | awk -F"[_.]" "{print tolower(\$2)}" | sed "s/[^0-9]//g")
+    linhas=$(($(wc -l < "{}") - 1))
+
+    if [ "$numero_arquivo" != "" ] && [ "$numero_arquivo" != "allelelength" ] && [ "$numero_arquivo" != "tsv" ]; then
+        if [ $linhas -gt 0 ]; then
+            echo "A amostra WP$numero_arquivo tem $linhas variante(s)"
+        else
+            echo "A amostra WP$numero_arquivo - nenhuma variante passou pelo filtro"
+        fi
+    fi
+'
 ```
 
 ##  AMOSTRAS
