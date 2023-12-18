@@ -59,7 +59,21 @@ udocker --allow-root install
   (not CLIN_SIG matches benign) and \
   (not IMPACT matches LOW) and \
   (Symbol in hpo/$HPO)"
-  ```
+```
+
+```
+Genes:
+ASXL1 ATM CALR CBL
+CUX1 DNMT3A EZH2
+GFI1B IDH1 IDH2
+JAK2 KMT2C KMT2D
+KRAS MPIG6B MPL
+NBEAL2 NFE2 NOTCH1
+NRAS RUNX1 SF3B1
+SH2B3 SHOC2 SRC
+SRSF2 TBXAS1 TET2
+TLR8 TP53 U2AF1
+```
 
 ```bash
 !sh einstein-mielofibrose/vep-gc.sh WP048 Myelofibrosis.txt
