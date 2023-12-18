@@ -91,8 +91,6 @@ mkdir -p /content/einstein-mielofibrose/analises/ && mv /content/einstein-mielof
 ```
 
 ```bash
-%%bash
-
 diretorio_origem="/content/einstein-mielofibrose/analises/"
 find $diretorio_origem -name "*WP*.tsv" -print0 | sort -z | uniq -z | xargs -0 -I {} bash -c '
     numero_arquivo=$(basename "{}" | awk -F"[_.]" "{print tolower(\$2)}" | sed "s/[^0-9]//g")
