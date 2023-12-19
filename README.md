@@ -235,13 +235,19 @@ result = pd.DataFrame(count_df, columns=['IMPACT'])
 display(HTML(result.to_html()))
 ```
 
-## Impacto x Consequencia x PolyPhen x Genes
+## Impacto x Consequencia x Genes x CLIN_SIG
 
 ```bash
 import pandas as pd
 from IPython.display import display, HTML
 df = pd.read_csv('/content/einstein-mielofibrose/analises/combined_data_subset.csv')
-grouped_data = df.groupby(['IMPACT', 'Consequence', 'SYMBOL','PolyPhen'])['TumorID'].unique().reset_index(name='Amostras')
-grouped_data['Contagem'] = df.groupby(['IMPACT', 'Consequence', 'SYMBOL','PolyPhen']).size().values
-display(HTML(grouped_data.to_html(index=False)))
+grouped_data = df.groupby(['IMPACT', 'Consequence', 'SYMBOL', 'CLIN_SIG'])['TumorID'].unique().reset_index(name='Amostras')
+grouped_data[''] = df.groupby(['IMPACT', 'Consequence', 'SYMBOL', 'CLIN_SIG']).size().values
+def format_clin_sig(group):
+    return '<br>'.join(set('&'.join(group).split('&')))
+
+
+grouped_data['CLIN_SIG'] = df.groupby(['IMPACT', 'Consequence', 'SYMBOL', 'CLIN_SIG'])['CLIN_SIG'].apply(format_clin_sig).reset_index(drop=True)
+grouped_data['Consequence'] = df.groupby(['IMPACT', 'Consequence', 'SYMBOL', 'CLIN_SIG'])['Consequence'].apply(format_clin_sig).reset_index(drop=True)
+display(HTML(grouped_data.to_html(index=False, escape=False)))
 ```
