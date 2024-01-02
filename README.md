@@ -16,7 +16,8 @@ Referência: https://github.com/renatopuga/lmabrasil-hg38
 
 Remover diretório sample_data
 
-```python
+```bash
+%%bash
 rm -r /content/sample_data/
 ```
 
